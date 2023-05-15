@@ -34,7 +34,7 @@ const ethers =  require("ethers");
 const url = "http://localhost:8545";
 const provider = new ethers.providers.JsonRpcProvider(url);
 const signer0 = provider.getSigner(0, provider);
-const receiver = "0x58F464E287C832EaDB3EFdeC4a60a4255fc26026";
+const receiver = process.env.RECEIVER;
 
 const testing_send_ether = async () => {
   const address = await signer0.getAddress();
